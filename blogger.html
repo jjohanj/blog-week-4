@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <link rel="stylesheet" type="text/css" href="blogstyle.css">
+ <title>Document</title>
+</head>
+<body>
+<div id="main">
+  <h2>Enter Blog text</h2>
+
+<form action="blog.php" method="POST">
+  <div id="inputfield"></div>
+    <input placeholder="Titel" name="titel" type="text" id="titel" required></br>
+    <input type="radio" name="category_id" value="1" checked> Verslag<br>
+    <input type="radio" name="category_id" value="2"> Uitslag<br>
+    <textarea rows="30" placeholder="Blog tekst" name="body" type="text" id="body" required></textarea></br>
+    <button type="submit">Write to database and publish on website</button></br>
+</div>
+</form>
+
+</body>
+
+<script>
+
+shortcuts = {
+    "scp" : "SC de Paardensprong",
+    "ela" : "Eli Alia",
+    "toer" : "toernooi"
+}
+
+window.onload = function() {
+    var ta = document.getElementById("body");
+    var timer = 0;
+    var re = new RegExp("\\b(" + Object.keys(shortcuts).join("|") + ")\\b", "g");
+
+    update = function() {
+        ta.value = ta.value.replace(re, function($0, $1) {
+            return shortcuts[$1.toLowerCase()];
+        });
+    }
+
+    ta.onkeydown = function() {
+        clearTimeout(timer);
+        timer = setTimeout(update, 200);
+    }
+
+
+}
+</script>
+</html>
