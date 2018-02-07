@@ -1,0 +1,107 @@
+
+body {
+  background-color: #c8e6c9;
+}
+
+button {
+  background-color: #97b498;
+  border: none;
+  color: white;
+  padding: 5px;
+  text-align: center;
+  text-decoration: none;
+  margin-top: 4px;
+  display: inline-block;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+p {
+  font-size:18px;
+  opacity: 0.8;
+  background-color: #97b498;
+  border-radius: 2px;
+  padding-left: 1em;
+  padding-top: 0.1em;
+  padding-bottom: 0.1em;
+  font-style: italic;
+}
+
+textarea {
+  margin-top: 4px;
+  width: 100%;
+  height: auto;
+}
+
+h2 {
+  background-color:  #97b498;
+  padding: 1em;
+  border-radius: 5px;
+  text-align: center;
+  opacity: 0.8;
+  margin-bottom:0px;
+}
+
+.reacties {
+  font-size: 14px;
+  color: gray;
+  padding: 3px;
+
+}
+
+.blogtext {
+  padding: inherit;
+  font-size: 16px;
+}
+
+.categorieoutput {
+  font-size: 12px;
+  text-align: right;
+  margin-top: 0px;
+}
+
+#titel {
+  width: 100%;
+  height: auto;
+  border: 1px solid #97b498;
+  border-radius:5px;
+  margin-top: 4px;
+  margin-bottom:4px;
+  padding-top:4px;
+  padding-bottom: 4px;
+  font-size:18px;
+}
+
+#topmenu {
+  padding-left:2em;
+  background-color: #fbfffc;
+  border-radius:5px;
+}
+
+#container{
+  margin-left:  5em;
+  margin-right: 5em;
+  width: 75%;
+  height: auto;
+}
+#main {
+  padding: 0.8em;
+  background-color: #fbfffc;
+  border-radius: 5px;
+  border:1px solid #97b498;
+}
+
+#form {
+  margin-right: 20%;
+  width: 80%;
+}
+
+#sheet {
+  width: 15%;
+  float: right;
+  margin-top: 4px;
+  border: 1px solid  #97b498;
+  padding: 6px;
+  border-radius: 4px;
+  font-size: 14px;
+}
