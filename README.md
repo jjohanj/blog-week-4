@@ -16,4 +16,13 @@ Derde versie:
 [w4-001] Woorden toegevoegd die automatisch worden aangevuld en deze woorden op het blogscherm tonen.
 
 [w4-002] De reacties worden nu getoond bij het artikel.
+Voorlopige versie online met deze mogelijkheden: http://jjohanj.nl.transurl.nl/blog/blogscreen.php http://jjohanj.nl.transurl.nl/blog/blogger.html Probleem: de plaats reactie knop valt in de titel van het artikel.
+
+Vierde versie:
+
+[w4-004] Blogger kan op een aparte pagina reacties verwijderen en  hij kan op dezelfde pagina [w4-005] de reactie mogelijkheid per artikel aan of uitzetten. Beide functies werken maar zien er nog niet logisch en gebruiksvriendelijk uit. 
+
+Het menu om te sorteren op categorie staat nu links, toegevoegd is de mogelijkheid om de reacties weer te geven of te verbergen.
+
+
 
