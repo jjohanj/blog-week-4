@@ -1,4 +1,9 @@
 
+a {
+  color: white;
+  text-decoration: none;
+}
+
 body {
   background-color: #c8e6c9;
 }
@@ -12,8 +17,10 @@ button {
   text-decoration: none;
   margin-top: 4px;
   display: inline-block;
-  font-size: 12px;
+  font-size: 14px;
   cursor: pointer;
+  margin-bottom: 0px;
+  text-align: left;
 }
 
 p {
@@ -40,13 +47,14 @@ h2 {
   text-align: center;
   opacity: 0.8;
   margin-bottom:0px;
+  margin-bottom: 2px;
 }
 
 .reacties {
   font-size: 14px;
   color: gray;
   padding: 3px;
-
+  margin-top: 5px;
 }
 
 .blogtext {
@@ -58,6 +66,12 @@ h2 {
   font-size: 12px;
   text-align: right;
   margin-top: 0px;
+}
+
+.reactiebutton {
+  float: right;
+  border-radius: 4px;
+  font-size:12px;
 }
 
 #titel {
@@ -81,14 +95,23 @@ h2 {
 #container{
   margin-left:  5em;
   margin-right: 5em;
-  width: 75%;
+  width: 80%;
   height: auto;
+  clear: both;
 }
 #main {
   padding: 0.8em;
   background-color: #fbfffc;
   border-radius: 5px;
   border:1px solid #97b498;
+}
+
+#main2 {
+  padding: 0.8em;
+  background-color: #fbfffc;
+  border-radius: 5px;
+  border:1px solid #97b498;
+  margin-left: 10%;
 }
 
 #form {
@@ -104,4 +127,23 @@ h2 {
   padding: 6px;
   border-radius: 4px;
   font-size: 14px;
+}
+#sheet2 {
+  width: 15%;
+  float: right;
+  margin-top: 4px;
+  border: 1px solid  #97b498;
+  padding: 6px;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+#menu {
+
+  background-color: #97b498;
+  float: left;
+  width: 9%;
+  opacity: 0.8;
+  border-radius: 4px;
+  padding: 2px;
 }

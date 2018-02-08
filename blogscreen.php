@@ -11,14 +11,26 @@
 <h2> Johan's Blog
 
 </h2>
-<div>
-  <button class="select" name='select' onclick=window.location.reload();>Home</button>
+<div id="menu">
+  <button class="select" onclick=window.location.reload();>Home</button>
   <button class="select" name='select' onclick=getMessage(1);>Verslagen</button>
   <button class="select" name='select' onclick=getMessage(2); >Uitslagen</button>
+  <button onclick="toggle('float_form', 'block')">Toon reacties</button>
+  <button onclick="toggle('float_form', 'none')">Verberg reacties</button>
 </div>
 
-<div id="main">
+<div id="main2">
+
+
 <script>
+
+function toggle(className, displayState){
+    var elements = document.getElementsByClassName("reacties")
+
+    for (var i = 0; i < elements.length; i++){
+        elements[i].style.display = displayState;
+    }
+}
 
 function getMessage(categorie){
     console.log (categorie);
@@ -27,7 +39,7 @@ function getMessage(categorie){
     xhttp.open("GET", "blog2.php? select=" + categorie, false);
     xhttp.send();
 
-    document.getElementById("main").innerHTML = xhttp.responseText;
+    document.getElementById("main2").innerHTML = xhttp.responseText;
   }
 
 </script>
@@ -40,12 +52,14 @@ try {
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
     $sql = "SELECT artikelen.id, artikelen.titel, categories.name,
-    artikelen.body FROM artikelen
+    artikelen.body, artikelen.comments FROM artikelen
     INNER JOIN categories ON artikelen.category_id=categories.id
     ORDER BY artikelen.id DESC";
 
     $result = $conn->query($sql);
     foreach ($result as $row) {
+
+      echo "<br>";
       echo "<p>";
       echo $row['titel'];
       echo "</p>";
@@ -55,16 +69,21 @@ try {
       echo "<div class='categorieoutput'>";
       echo $row ['name'];
       echo "</div>";
-      echo "<form action='blog3.php' method='POST' >";
-      echo "<textarea name='reactie' placeholder='reageer'></textarea>";
-      echo "<textarea name='reactie_id' style='display:none'>";
-      echo $row['id'];
-      echo "</textarea>";
-      echo "<button>";
-      echo "Plaats reactie";
-      echo "</button>";
-      echo "</form>";
       echo "<div class='reacties'>";
+      if ($row ['comments'] == 'aan') {
+        echo "<div>";
+        echo "<form action='blog3.php' method='POST' >";
+        echo "<textarea name='reactie' placeholder='reageer'></textarea>";
+        echo "<textarea name='reactie_id' style='display:none'>";
+        echo $row['id'];
+        echo "</textarea>";
+        echo "<button class='reactiebutton'>";
+        echo "Plaats reactie";
+        echo "</button>";
+        echo "</form>";
+        echo "</div>";
+      }
+
       include "blog4.php";
       echo "</div>";
     }

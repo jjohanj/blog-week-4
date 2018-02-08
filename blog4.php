@@ -12,7 +12,7 @@ try {
 
     $result = $conn->query($sql);
     foreach ($result as $row) {
-      echo "<div class='reacties'>";
+      echo "<div>";
       echo $row['reacties'];
       echo "<br>";
       echo "</div>";

@@ -9,8 +9,9 @@
 
 
   <div id="main">
-
     <h2>Enter Blog text</h2>
+
+
     <div id="sheet">
       <p>Text Expander</p>
       scp = SC de Paardensprong<br>
@@ -19,6 +20,7 @@
       scm = schaakmat <br>
       tgs = tegenstander
     </div>
+  <button onclick="window.location.href = 'reactions.php';">Verwijder reacties</button>
   <div id="form">
   <form action="blog.php" method="POST">
     <div id="inputfield"></div>
@@ -26,9 +28,10 @@
       <input type="radio" name="category_id" value="1" checked> Verslag<br>
       <input type="radio" name="category_id" value="2"> Uitslag<br>
       <textarea rows="30" placeholder="Blog tekst" name="body" type="text" id="body" required></textarea></br>
-      <button type="submit">Write to database and publish on website</button></br>
+      <button type="submit">Plaats blog op de website!</button></br>
     </div>
   </form>
+
   </div>
   </div>
 
