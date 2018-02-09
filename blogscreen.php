@@ -12,37 +12,12 @@
 
 </h2>
 <div id="menu">
-  <button class="select" onclick=window.location.reload();>Home</button>
+  <button class="select" onclick=window.location.reload();>Blog</button>
   <button class="select" name='select' onclick=getMessage(1);>Verslagen</button>
   <button class="select" name='select' onclick=getMessage(2); >Uitslagen</button>
-  <button onclick="toggle('float_form', 'block')">Toon reacties</button>
-  <button onclick="toggle('float_form', 'none')">Verberg reacties</button>
 </div>
 
 <div id="main2">
-
-
-<script>
-
-function toggle(className, displayState){
-    var elements = document.getElementsByClassName("reacties")
-
-    for (var i = 0; i < elements.length; i++){
-        elements[i].style.display = displayState;
-    }
-}
-
-function getMessage(categorie){
-    console.log (categorie);
-    //var value = document.getElementById("select").value;
-    var xhttp = new XMLHttpRequest();
-    xhttp.open("GET", "blog2.php? select=" + categorie, false);
-    xhttp.send();
-
-    document.getElementById("main2").innerHTML = xhttp.responseText;
-  }
-
-</script>
 
 <?php
 try {
@@ -83,7 +58,6 @@ try {
         echo "</form>";
         echo "</div>";
       }
-
       include "blog4.php";
       echo "</div>";
     }
@@ -94,6 +68,16 @@ catch(PDOException $e)
     }
 ?>
 </div>
+<script>
 
+function getMessage(categorie){
+    var xhttp = new XMLHttpRequest();
+    xhttp.open("GET", "blog2.php? select=" + categorie, false);
+    xhttp.send();
+
+    document.getElementById("main2").innerHTML = xhttp.responseText;
+  }
+
+</script>
 </body>
 </html>

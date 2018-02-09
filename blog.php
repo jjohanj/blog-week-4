@@ -1,5 +1,6 @@
 <?php
 
+// write the blog entry to the database
 $title = $_POST['titel'];
 $body = $_POST['body'];
 $categorie = $_POST['category_id'];
@@ -12,10 +13,6 @@ try {
     $sql = "INSERT INTO artikelen (titel, body, category_id)
     VALUES ('$title', '$body', '$categorie')";
     $conn->exec($sql);
-    $last_id = $conn->lastInsertId();
-    echo "Connected successfully</br>";
-    echo "New record created successfully. Last inserted ID is: " . $last_id;
-    echo "succesfull blog entry";
     header('Location: http://jjohanj.nl.transurl.nl/blog/blogger.html');
     }
 

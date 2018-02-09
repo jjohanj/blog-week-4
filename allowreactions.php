@@ -1,5 +1,6 @@
 <?php
 
+//enable or disable user comments by an article
 $comments = $_POST['comments'];
 $artikelId = $_POST ['artikelid'];
 

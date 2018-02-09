@@ -50,10 +50,15 @@ h2 {
   margin-bottom: 2px;
 }
 
+.select {
+  color: black;
+  background-color: #fbfffc;
+}
+
 .reacties {
   font-size: 14px;
   color: gray;
-  padding: 3px;
+  padding: 6px;
   margin-top: 5px;
 }
 
@@ -74,7 +79,7 @@ h2 {
   font-size:12px;
 }
 
-#titel {
+#titel, .reactionsinput {
   width: 100%;
   height: auto;
   border: 1px solid #97b498;
@@ -107,7 +112,7 @@ h2 {
 }
 
 #main2 {
-  padding: 0.8em;
+  padding: 5px;
   background-color: #fbfffc;
   border-radius: 5px;
   border:1px solid #97b498;
@@ -139,11 +144,26 @@ h2 {
 }
 
 #menu {
-
-  background-color: #97b498;
+  border: 1px solid #97b498;
+  background-color: #fbfffc;
   float: left;
   width: 9%;
   opacity: 0.8;
   border-radius: 4px;
-  padding: 2px;
+  padding-top: 2em;
+  padding-right: 3px;
+  height: 10em;
+}
+
+@media screen and (max-width: 1000px) {
+  #main2 {width: 98%;
+          margin-left: 0px;
+
+  }
+  #menu {
+    width: 99%;
+    height: auto;
+    padding-top: 0px;
+  }
+
 }
