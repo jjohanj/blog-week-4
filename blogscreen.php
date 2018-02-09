@@ -17,6 +17,7 @@
   <button class="select" name='select' onclick=getMessage(2); >Uitslagen</button>
 </div>
 
+
 <div id="main2">
 
 <?php
@@ -33,7 +34,6 @@ try {
 
     $result = $conn->query($sql);
     foreach ($result as $row) {
-
       echo "<br>";
       echo "<p>";
       echo $row['titel'];
@@ -75,7 +75,7 @@ function getMessage(categorie){
     xhttp.open("GET", "blog2.php? select=" + categorie, false);
     xhttp.send();
 
-    document.getElementById("main2").innerHTML = xhttp.responseText;
+    document.getElementById("main2").innerHTML = "<br>" + xhttp.responseText;
   }
 
 </script>
